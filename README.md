@@ -107,7 +107,7 @@ When a user fills in the event form and clicks "Generate AI Plan":
 
 | Role | Name |
 |------|------|
-| Developer | **Shekhar Jadhav** |
+| Developer | **Wizard of Hahz** |
 
 Built for AI-Powered No-Code Application Development course.
 
