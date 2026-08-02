@@ -27,17 +27,18 @@ export default function EventForm({ eventData, setEventData, setAiResults, onNex
 - Date: ${form.date}
 - Guests: ${form.guestCount}
 - Location: ${form.location || "Not specified"}
-- Budget Range: ₹${form.budgetMin || 0} - ₹${form.budgetMax}
+- Budget Range: $${form.budgetMin || 0} - $${form.budgetMax}
 - Description: ${form.description || "General event"}
 
 Respond ONLY with a valid JSON object (no markdown, no explanation) with this exact structure:
 {
   "vendors": [
-    { "category": "Venue", "name": "Suggested Vendor Name", "priceRange": "₹X - ₹Y", "rating": 4.5, "notes": "Brief note" },
-    { "category": "Catering", "name": "Suggested Vendor Name", "priceRange": "₹X - ₹Y", "rating": 4.2, "notes": "Brief note" },
-    { "category": "Photography", "name": "Suggested Vendor Name", "priceRange": "₹X - ₹Y", "rating": 4.7, "notes": "Brief note" },
-    { "category": "Decoration", "name": "Suggested Vendor Name", "priceRange": "₹X - ₹Y", "rating": 4.3, "notes": "Brief note" },
-    { "category": "Entertainment", "name": "Suggested Vendor Name", "priceRange": "₹X - ₹Y", "rating": 4.1, "notes": "Brief note" }
+  const vendors = [
+    { "category": "Venue", "name": "Suggested Vendor Name", "priceRange": "$X - $Y", "rating": 4.5, "notes": "Brief note" },
+    { "category": "Catering", "name": "Suggested Vendor Name", "priceRange": "$X - $Y", "rating": 4.2, "notes": "Brief note" },
+    { "category": "Photography", "name": "Suggested Vendor Name", "priceRange": "$X - $Y", "rating": 4.7, "notes": "Brief note" },
+    { "category": "Decoration", "name": "Suggested Vendor Name", "priceRange": "$X - $Y", "rating": 4.3, "notes": "Brief note" },
+    { "category": "Entertainment", "name": "Suggested Vendor Name", "priceRange": "$X - $Y", "rating": 4.1, "notes": "Brief note" }
   ],
   "budget": {
     "total": ${form.budgetMax},
@@ -128,7 +129,7 @@ Fill in realistic amounts for budget breakdown that sum to ${form.budgetMax}. Su
         <div className="card" style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
           <div className="form-group">
             <label className="form-label">Event Name</label>
-            <input className="form-input" placeholder="e.g. Priya's 25th Birthday" value={form.name} onChange={e => set("name", e.target.value)} />
+            <input className="form-input" placeholder="e.g. Bray's 15th Birthday" value={form.name} onChange={e => set("name", e.target.value)} />
           </div>
           <div className="grid-2">
             <div className="form-group">
@@ -149,16 +150,16 @@ Fill in realistic amounts for budget breakdown that sum to ${form.budgetMax}. Su
             </div>
             <div className="form-group">
               <label className="form-label">Location / City</label>
-              <input className="form-input" placeholder="e.g. Mumbai" value={form.location} onChange={e => set("location", e.target.value)} />
+              <input className="form-input" placeholder="e.g. Atlanta" value={form.location} onChange={e => set("location", e.target.value)} />
             </div>
           </div>
           <div className="grid-2">
             <div className="form-group">
-              <label className="form-label">Budget Min (₹)</label>
+              <label className="form-label">Budget Min ($)</label>
               <input type="number" className="form-input" placeholder="50000" value={form.budgetMin} onChange={e => set("budgetMin", e.target.value)} />
             </div>
             <div className="form-group">
-              <label className="form-label">Budget Max (₹)</label>
+              <label className="form-label">Budget Max ($)</label>
               <input type="number" className="form-input" placeholder="200000" value={form.budgetMax} onChange={e => set("budgetMax", e.target.value)} />
             </div>
           </div>
