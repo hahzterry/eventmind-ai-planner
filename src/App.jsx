@@ -30,7 +30,7 @@ export default function App() {
         <div className="header-inner">
           <div className="logo">
             <span className="logo-icon">◈</span>
-            <span className="logo-text">EventMind</span>
+            <span className="logo-text">Event.</span>
             <span className="logo-tag">AI Planner</span>
           </div>
           <nav className="nav">
