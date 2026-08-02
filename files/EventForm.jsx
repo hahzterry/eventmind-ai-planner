@@ -6,11 +6,11 @@ const EVENT_TYPES = [
 ];
 
 const BUDGET_RANGES = [
-  { value: "under-50k",  label: "Under ₹50,000" },
-  { value: "50k-1l",     label: "₹50,000 – ₹1,00,000" },
-  { value: "1l-2l",      label: "₹1,00,000 – ₹2,00,000" },
-  { value: "2l-5l",      label: "₹2,00,000 – ₹5,00,000" },
-  { value: "above-5l",   label: "Above ₹5,00,000" },
+  { value: "under-600",    label: "Under $600" },
+  { value: "600-1200",     label: "$600 – $1,200" },
+  { value: "1200-2400",    label: "$1,200 – $2,400" },
+  { value: "2400-6000",    label: "$2,400 – $6,000" },
+  { value: "above-6000",   label: "Above $6,000" },
 ];
 
 export default function EventForm({ onEventCreated }) {
@@ -91,7 +91,7 @@ export default function EventForm({ onEventCreated }) {
             id="eventName"
             name="eventName"
             type="text"
-            placeholder="e.g. Priya's Birthday Bash"
+            placeholder="e.g. Bray's Birthday Bash"
             value={form.eventName}
             onChange={handleChange}
             required
@@ -135,7 +135,7 @@ export default function EventForm({ onEventCreated }) {
               id="location"
               name="location"
               type="text"
-              placeholder="e.g. Mumbai, Maharashtra"
+              placeholder="e.g. Atlanta, GA"
               value={form.location}
               onChange={handleChange}
             />
